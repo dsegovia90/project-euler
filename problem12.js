@@ -24,8 +24,6 @@ function isPrime(n) {
   return isPrime
 }
 
-const arrOfPrimes = [2]
-
 function add1Prime() {
   const lastPrime = arrOfPrimes[arrOfPrimes.length - 1]
   let x = lastPrime + 1
@@ -63,17 +61,17 @@ function sumOfN(n) {
   return (n * (n+1)) / 2
 }
 
-console.log(countFactors(120))
+const arrOfPrimes = [2]
 
 let y = 3
 
+console.time('timer')
+
 while (countFactors(sumOfN(y)) < 500) {
-  const sumN = sumOfN(y)
-  const factorN = countFactors(sumN)
-  console.log(sumN, factorN)
   y++
 }
 
+console.timeEnd('timer')
 console.log(y, sumOfN(y), countFactors(sumOfN(y)));
 
 
